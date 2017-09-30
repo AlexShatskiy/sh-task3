@@ -23,7 +23,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.shatskiy.DAO.NewsDAO;
 import com.shatskiy.domain.News;
 
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:applicationContextDAOTest.xml")
 public class TestNewsDAOImpl {
@@ -31,12 +30,6 @@ public class TestNewsDAOImpl {
 	@Autowired
 	@Qualifier("NewsDAOImpl")
 	private NewsDAO newsDao;
-	/*
-	 insert into news(title, date, brief, content, status)
-		values('title', '2000-1-01', 'brief', 'content', 'added');
-		
-		newsId = 1
-	 */
 	
 	@Test
 	@Transactional

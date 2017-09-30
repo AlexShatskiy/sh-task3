@@ -6,7 +6,7 @@ import com.shatskiy.domain.News;
 public interface NewsDAO 
 {
 	public List<News> getList();
-	public News save(News news);
-	public News remove(News news);
+	public void save(News news);
+	public void remove(News news);
 	public News fetchById(int newsId);
 }

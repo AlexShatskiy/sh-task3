@@ -102,6 +102,10 @@
             
             <div class="card-body">
             
+            <c:if test="${not empty newsForm.message }">
+            <p class="text-danger"><spring:message code="label.validationFail"/></p>
+            </c:if>
+            
 	            <form:form action="save" method = "post" modelAttribute="newsForm">
 				<form:hidden path="newsMessage.newsId"/>
 				<c:url var="edit" value="/news/edit">

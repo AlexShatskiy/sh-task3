@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.shatskiy.domain.News;
 import com.shatskiy.domain.NewsForm;
 import com.shatskiy.service.NewsService;
+import com.shatskiy.service.exception.NewsValidationException;
 
 @Controller
 @RequestMapping("/news")
@@ -59,8 +60,6 @@ public class NewsController {
 		return "redirect:list";
 	}
 	
-
-
 	@GetMapping("/add")
 	public String addNews(Model model) {
 		

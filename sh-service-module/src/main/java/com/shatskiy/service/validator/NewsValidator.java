@@ -2,7 +2,6 @@ package com.shatskiy.service.validator;
 
 import com.shatskiy.domain.News;
 
-
 public final class NewsValidator {
 	
 	public static boolean isValid(News news){
