@@ -50,9 +50,8 @@ public class NewsServiceImpl implements NewsService {
 	public void remove(int[] newsId) {
 
 		if (newsId == null) {
-			log.error("fail in remove()");
-			throw new NewsValidationException("fail in remove");
-		} else {
+			log.info("newsId == null");
+			} else {
 			for (int id : newsId) {
 				News news = newsDAO.fetchById(id);
 				newsDAO.remove(news);
